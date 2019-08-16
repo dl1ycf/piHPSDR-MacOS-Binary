@@ -43,17 +43,6 @@ all those it dependds on) which
 is needed for running piHPSDR. NOTE: you will be asked
 the "admin" password once. If then, a window from the
 keychain appears, you can safely answer "do not allow".
-For your convenience, the contents of the file "install.sh" are
-documented here:
-
-------------------------------------------------------------------------------------------------------
-#!/bin/sh
-  
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew install gtk+3
-
-------------------------------------------------------------------------------------------------------
 
 Download piHPSDR application
 ============================
