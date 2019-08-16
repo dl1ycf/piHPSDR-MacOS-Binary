@@ -39,7 +39,7 @@ chmod 700 install.sh
 This should execute a handful of commands I have put
 into the file install.sh. It initializes the
 "homebrew" universe and installs the gtk+3 package (and 
-all those it dependds on) which
+all those it depends on) which
 is needed for running piHPSDR. NOTE: you will be asked
 the "admin" password once. If then, a window from the
 keychain appears, you can safely answer "do not allow".
@@ -63,8 +63,16 @@ The program can do adaptive pre-distortion both with the old and new protocol
 
 LOCALCW
 -------
-The program can generate CW from key/paddle attached to the SDR.
-If you check "internal" in the CW menu, CW from the key is generated within the SDR.
+The program is compiled such that a CW key/paddle connected to the radio
+can be used both for "internal" and "local" CW. Internal CW is selected
+by checking the "internal" box in the CW menu. In this case, the FPGA
+in the radio generates both the CW RF signal and the CW side tone.
+If you un-check the "internal" button, CW and sidetone is generated
+within piHPSDR. Normally "internal" CW is to be preferred, but if
+you need the CW side tone on the local MacOS audio (for example, from
+the built-in speakers of your Mac) then you must use local CW since
+"internal" CW will generate a sidetone only at the headphone jacket
+of your radio.
               
 STEMLAB
 -------
