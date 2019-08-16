@@ -27,9 +27,14 @@ have never used it, it is in the folder
 /Applications/Utilities. In the terminal window that
 opens, type the commands
 
+---------------------------------------------------------------------------
 cd $HOME/Desktop
+
 chmod 700 install.sh
+
 ./install.sh
+
+---------------------------------------------------------------------------
 
 This should execute a handful of commands I have put
 into the file install.sh. It initializes the
