@@ -18,8 +18,8 @@ everybody can do it. I have built this file within the
 initialize "homebrew" and install the parts required for
 running piHPSDR.
 
-Step 1: init homebrew
-======================
+Initialize the Homebrew Universe and Install GTK3 libraries
+===========================================================
 
 Get the file "install.sh" and place it on the Desktop
 of your Mac OS. Then, open the "terminal" app. If you
@@ -33,7 +33,31 @@ chmod 700 install.sh
 
 This should execute a handful of commands I have put
 into the file install.sh. It initializes the
-"homebrew" universe and installs the gtk+3 package which
-is needed for running piHPSDR.
+"homebrew" universe and installs the gtk+3 package (and 
+all those it dependds on) which
+is needed for running piHPSDR. NOTE: you will be asked
+the "admin" password once. If then, a window from the
+keychain appears, you can safely answer "do not allow".
+For your convenience, the contents of the file "install.sh" are
+documented here:
+
+------------------------------------------------------------------------------------------------------
+#!/bin/sh
+  
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install gtk+3
+
+------------------------------------------------------------------------------------------------------
+
+Download piHPSDR application
+============================
+
+A MacOS application bundle has a well-defined directory structure. For the ease of installation,
+the application is compressed (ZIP file). If you download and decompress it, you should have
+a working MacOS application file with name "pihpsdr.app" and the HPSDR logo as the icon.
+Double-clicking it starts it.
+
+
 
 
