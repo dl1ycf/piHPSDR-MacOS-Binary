@@ -58,6 +58,52 @@ the application is compressed (ZIP file). If you download and decompress it, you
 a working MacOS application file with name "pihpsdr.app" and the HPSDR logo as the icon.
 Double-clicking it starts it.
 
+Features compiled into the program
+==================================
 
+The following features, selectable at compile time, have been activated:
+
+PURESIGNAL
+----------
+The program can do adaptive pre-distortion both with the old and new protocol
+
+LOCALCW
+-------
+The program can generate CW from key/paddle attached to the SDR.
+If you check "internal" in the CW menu, CW from the key is generated within the SDR.
+              
+STEMLAB
+-------
+The program can detect a RedPitaya, start the SDR application through the web
+interface, and then start the radio.
+
+MIDI  
+----
+The program can be controlled by a MIDI console attached to the Macintosh.
+I use the Behringer PL-1 and this makes much fun. Instructions for using
+MIDI follows.
+
+              
+Using MIDI
+==========
+
+I refrained from building in a menu to specify the function of each knob or button
+of a MIDI controller. This is done by editing a simple text file (you can modify it
+with a text editor). For the Behringer CMD PL-1 console, a sample file is present here
+under the name midi.inp.
+This must be placed in the working directory of piHPSDR, which is in the folder
+
+$HOME  --> Library --> Application Support --> piHPSDR
+
+It is possible that, depending on the MacOS version and the setting of the user skills,
+you see no folder named "Library" in your Home folder. In this case you have to place the
+midi.inp file on the Desktop, open a terminal window and type in the commands
+
+cd $HOME/Desktop
+
+mv midi.inp "$HOME/Library/Application Support/piHPSDR"
+
+To do so, you should have started piHPSDR at least once, since upon its first invocation
+it generates the piHPSDR folder within the "Application Support" folder.
 
 
