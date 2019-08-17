@@ -30,15 +30,25 @@ opens, type the commands
 ---------------------------------------------------------------------------
 cd $HOME/Desktop
 
+xcode-select --install
+
 chmod 700 install.sh
 
 ./install.sh
 
 ---------------------------------------------------------------------------
 
-This should execute a handful of commands I have put
-into the file install.sh. It initializes the
-"homebrew" universe and installs the gtk+3 package (and 
+The "xcode-select" command is likely to be necessary if you are usually
+*not* doing UNIX-type programming on your Mac. It should install the
+"command-line tools", a collection of 
+commands such as C compilers and support programs that seemingly are
+necessary to install "homebrew". It is not necessary to have the XCode
+application, so if you are asked whether you want to install the command
+line tools (only) or get the XCode application you opt for the former.
+
+The install.sh shell scripts executes only two commands that
+initialize the
+"homebrew" universe and install the gtk+3 package (and 
 all those it depends on) which
 is needed for running piHPSDR. NOTE: you will be asked
 the "admin" password once. If then, a window from the
