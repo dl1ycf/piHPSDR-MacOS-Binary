@@ -54,6 +54,14 @@ is needed for running piHPSDR. NOTE: you will be asked
 the "admin" password once. If then, a window from the
 keychain appears, you can safely answer "do not allow".
 
+What if "homebrew" is already installed but not GTK?
+=====================================================
+
+In this case, it should be sufficient to enter the following
+command from within a terminal window:
+
+brew install gtk+3
+
 Download piHPSDR application
 ============================
 
