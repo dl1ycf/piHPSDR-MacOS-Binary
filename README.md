@@ -81,8 +81,9 @@ tools are already there).
 
 After this, pihpsdr should be able to run. If this succeeds, you can
 load any packages that you need and that were in your previous 
-homebrew universe by "brew install" commands, and you also can
-copy any non-homebrew file that were in your old /usr/local from your backup
+homebrew universe by "brew install" commands (you have saved the list of
+packages installed previously in a file on the Desktop). You also can
+(should) copy any non-homebrew file that were in your old /usr/local from your backup
 to your new /usr/local.
 
 Download piHPSDR application
