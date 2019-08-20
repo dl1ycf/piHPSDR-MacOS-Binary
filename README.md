@@ -62,6 +62,29 @@ command from within a terminal window:
 
 brew install gtk+3
 
+What if an existing "homebrew" installation is corrupt?
+=======================================================
+
+The feedback I got from users at least in one case indicates that
+there was a "homebrew" installation that was somehow inconsistent,
+and could not be fixed with "brew update", "brew upgrade",
+"brew link" and similar commands. In this case, I recommend saving
+the old "brew universe" and doing a fresh install. As a first step,
+save whatever is contained in the /usr/local directory to a backup.
+Then, issue the command "brew list" to get a list of installed
+packages and save this list to a file on the Desktop.
+Then, remove /usr/local completely and invoke the install.sh
+script (installing the command line tools via xcode-select should not
+be necessary if you already had a running "homebrew universe". On the
+other hand, issuing this command does no harm if the command line
+tools are already there).
+
+After this, pihpsdr should be able to run. If this succeeds, you can
+load any packages that you need and that were in your previous 
+homebrew universe by "brew install" commands, and you also can
+copy any non-homebrew file that were in your old /usr/local from your backup
+to your new /usr/local.
+
 Download piHPSDR application
 ============================
 
