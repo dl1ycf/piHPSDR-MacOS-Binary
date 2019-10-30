@@ -1,8 +1,12 @@
 # piHPSDR-MacOS-Binary
 
 Here I provide a "click-able" MacOS app file for piHPSDR.
-It is compiled+linked under MacOS 10.13 "High Sierra" and
-tested both under MacOS 10.13 and MacOS 10.14 "Mojave".
+It is compiled+linked under MacOS 10.14 "Mojave" and
+has been tested there. Because for some reasons I post-poned
+the update to MacOS 10.15 "Catalina" I could not test the
+program there.
+
+This is the new piHPSDR 2.0.0 beta version.
 
 Unfortunately, it is quite difficult to provide a
 fully self-contained MacOS app-file for a GTK-based program.
@@ -116,16 +120,20 @@ the built-in speakers of your Mac) then you must use local CW since
 "internal" CW will generate a sidetone only at the headphone jacket
 of your radio.
               
-STEMLAB
--------
+STEMLAB without AVAHI
+---------------------
 The program can detect a RedPitaya, start the SDR application through the web
-interface, and then start the radio.
+interface, and then start the radio. You need to type in the IP address of the
+RedPitaya once (it is remembered), so the best is to give the RedPitaya a
+fixed IP address.
 
 MIDI  
 ----
 The program can be controlled by a MIDI console attached to the Macintosh.
-I use the Behringer PL-1 and this makes much fun. Instructions for using
-MIDI follows.
+I use the Behringer PL-1 and this makes much fun. Meanwhile this has also
+been tested with a Behringer Studio2a and with a Hercules DJcompact console.
+The MIDI documentation can be found in the github.com/dl1ycf/piHPSDR repository
+with the sub-directory release/pihpsdr.
 
               
 Using MIDI
