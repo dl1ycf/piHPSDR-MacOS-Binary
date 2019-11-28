@@ -134,28 +134,3 @@ I use the Behringer PL-1 and this makes much fun. Meanwhile this has also
 been tested with a Behringer Studio2a and with a Hercules DJcompact console.
 The MIDI documentation can be found in the github.com/dl1ycf/piHPSDR repository
 with the sub-directory release/pihpsdr.
-
-              
-Using MIDI
-==========
-
-I refrained from building in a menu to specify the function of each knob or button
-of a MIDI controller. This is done by editing a simple text file (you can modify it
-with a text editor). For the Behringer CMD PL-1 console, a sample file is present here
-under the name midi.inp.
-This must be placed in the working directory of piHPSDR, which is in the folder
-
-$HOME  --> Library --> Application Support --> piHPSDR
-
-It is possible that, depending on the MacOS version and the setting of the user skills,
-you see no folder named "Library" in your Home folder. In this case you have to place the
-midi.inp file on the Desktop, open a terminal window and type in the commands
-
-cd $HOME/Desktop
-
-mv midi.inp "$HOME/Library/Application Support/piHPSDR"
-
-To do so, you should have started piHPSDR at least once, since upon its first invocation
-it generates the piHPSDR folder within the "Application Support" folder.
-
-
