@@ -6,7 +6,7 @@ has been tested there. Because for some reasons I post-poned
 the update to MacOS 10.15 "Catalina" I could not test the
 program there.
 
-This is the new piHPSDR 2.0.0 beta version.
+This is the new piHPSDR 2 near-final version.
 
 Unfortunately, it is quite difficult to provide a
 fully self-contained MacOS app-file for a GTK-based program.
