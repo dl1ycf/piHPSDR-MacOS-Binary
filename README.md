@@ -1,35 +1,34 @@
 # piHPSDR-MacOS-Binary
 
 Here I provide a "click-able" MacOS app file for piHPSDR.
-It is compiled+linked under MacOS 10.14 "Mojave" and
-has been tested there. Because for some reasons I post-poned
-the update to MacOS 10.15 "Catalina" I could not test the
-program there.
+It is compiled+linked under MacOS 10.15 "Catalina" and
+has been tested there. 
 
 This is the new piHPSDR 2 near-final version.
 
-Unfortunately, it is quite difficult to provide a
-fully self-contained MacOS app-file for a GTK-based program.
+Since it is next-to-impossible to provide a really
+self-contained app bundle for GTK applications, we
+only include "own" libraries (WDSP and SoapySDR) in the
+app bundle, and require that all other libraries are
+installed by the user in the default location.
 
-Therefore the piHPSDR app-file is bundled with many of the
-required libraries such as fftw, WDSP, portaudio etc., but
-needs a working GTK installation in /usr/local.
+This is done automatically by the "install.sh" shell script.
+It initializes the "homebrew" universe and installs exactly
+those "homebrew" packages needed to run piHPSDR.
 
-This is not so difficult, and has been tested by somebody
-completely oblivious to MacOS and UNIX programming, so
-everybody can do it. I have built this file within the
-"homebrew" universe, so I give instructions how to
-initialize "homebrew" and install the parts required for
-running piHPSDR.
+Then the program works but is not able to connect to
+devices through the SoapySDR layer. To this end, the SoaypSDR
+modules must be installed in /usr/local/lib. The files are
+contained in the file soapy.tar.
 
-Initialize the Homebrew Universe and Install GTK3 libraries
-===========================================================
+Initialize the Homebrew Universe and install libraries
+============================================= ========
 
 Get the file "install.sh" and place it on the Desktop
 of your Mac OS. Then, open the "terminal" app. If you
 have never used it, it is in the folder
 /Applications/Utilities. In the terminal window that
-opens, type the commands
+opens, type the commands betwen the dahes lines:
 
 ---------------------------------------------------------------------------
 cd $HOME/Desktop
@@ -39,7 +38,6 @@ xcode-select --install
 chmod 700 install.sh
 
 ./install.sh
-
 ---------------------------------------------------------------------------
 
 The "xcode-select" command is likely to be necessary if you are usually
@@ -50,21 +48,17 @@ necessary to install "homebrew". It is not necessary to have the XCode
 application, so if you are asked whether you want to install the command
 line tools (only) or get the XCode application you opt for the former.
 
-The install.sh shell scripts executes only two commands that
-initialize the
-"homebrew" universe and install the gtk+3 package (and 
-all those it depends on) which
-is needed for running piHPSDR. NOTE: you will be asked
+The install.sh shell scripts simply initializes the "homebrew"
+universe and then installs packages needed for pihpsdr.
+NOTE: you will be asked
 the "admin" password once. If then, a window from the
 keychain appears, you can safely answer "do not allow".
 
 What if "homebrew" is already installed but not GTK?
 =====================================================
 
-In this case, it should be sufficient to enter the following
-command from within a terminal window:
-
-brew install gtk+3
+In this case, you can still execute the "install.sh" script
+and this does no harm.
 
 What if an existing "homebrew" installation is corrupt?
 =======================================================
@@ -93,10 +87,30 @@ to your new /usr/local.
 Download piHPSDR application
 ============================
 
-A MacOS application bundle has a well-defined directory structure. For the ease of installation,
-the application is compressed (ZIP file). If you download and decompress it, you should have
-a working MacOS application file with name "pihpsdr.app" and the HPSDR logo as the icon.
-Double-clicking it starts it.
+A MacOS application bundle has a well-defined directory structure.
+For the ease of installation, this bundle has been packed into a single
+"tar" file named pihpsdr.app.tar. Download this file to your Desktop,
+open a terminal window and type in the commands between the dashed lines:
+
+---------------------------------------------------------------------------
+cd $HOME/Desktop
+tar xf pihpsdr.app.tar
+---------------------------------------------------------------------------
+
+Download and install SoapySDR modules
+=====================================
+If you only want to use piHPSDR with HPSDR radios, you can skip this step.
+However, to play with SDR radios connected by the SoapySDR layer (for
+example: LimeSDR, Adalm Pluto, RTL sticks) you need some SoapySDR support
+files. To install these, download the file soapy.tar to the Desktop,
+open a terminal window and type the commands between the dashed lines:
+
+---------------------------------------------------------------------------
+cd $HOME/Desktop
+tar xfP soapy.tar
+---------------------------------------------------------------------------
+
+
 
 Features compiled into the program
 ==================================
@@ -134,3 +148,8 @@ I use the Behringer PL-1 and this makes much fun. Meanwhile this has also
 been tested with a Behringer Studio2a and with a Hercules DJcompact console.
 The MIDI documentation can be found in the github.com/dl1ycf/piHPSDR repository
 with the sub-directory release/pihpsdr.
+
+SOAPYSDR
+--------
+Ability to use SDR hardware connected via the SoapySDR lib. I have tested this
+with the Adalm Pluto connected via an USB cable to the Macintosh.
