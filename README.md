@@ -61,12 +61,15 @@ the "homebrew" universe and the required "homebrew" packages, the file containin
 the app bundle (pihpsdr.app.tar) and the file containing the SoapySDR support files
 (soapy.tar) are extracted.
 
-NOTE: you will be asked the "admin" password once. If then, a window from the
-keychain appears, you can safely answer "do not allow".
+NOTE: you will be asked the "admin" password once. The procedure can take some
+time (this also depends on the speed of your internet connection), so be patient.
+Very many packages (many more than those named in install.sh) are installed,
+since when installing a package with homebrew, all prerequisites of that package
+are installed as well.
 
 
 What if "homebrew" is already installed?
-=======================================
+========================================
 
 In this case, you should still execute the "install.sh" script.
 Existing homebrew packages that you might use are not deleted,
