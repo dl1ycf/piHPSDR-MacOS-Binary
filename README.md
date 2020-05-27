@@ -21,13 +21,15 @@ devices through the SoapySDR layer. To this end, the SoaypSDR
 modules must be installed in /usr/local/lib. The files are
 contained in the file soapy.tar.
 
-Install all prerequisites etc.
-==============================
+Install prerequisites etc.
+==========================
 
 As a prerequisite, download the three files
 
 install.sh
+
 pihpsdr.app.tar
+
 soapy.tar
 
 and put them on your Desktop. Depending on your browser,
@@ -43,9 +45,13 @@ Open the "terminal" app. If you have never used it, it is in the folder
 commands:
 
 ---------------------------------------------------------------------------
+
 cd $HOME/Desktop
+
 chmod 700 install.sh
+
 ./install.sh
+
 ---------------------------------------------------------------------------
 
 Note again, this procedure requires that the files "pihpsdr.app.tar" and "soapy.tar"
