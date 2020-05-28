@@ -28,8 +28,10 @@ brew install fftw
 # list produced, search for the same string using the
 # "search" facility of your internet browser
 #
+brew install cmake
 brew install libusb
 brew install pothosware/pothos/soapysdr
+brew install pothosware/pothos/soapyplutosdr
 brew install pothosware/pothos/limesuite
 brew install pothosware/pothos/soapyrtlsdr
 brew install pothosware/pothos/soapyairspy
