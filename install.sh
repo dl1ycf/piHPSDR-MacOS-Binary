@@ -36,7 +36,6 @@ brew install pothosware/pothos/soapyairspy
 brew install pothosware/pothos/soapyairspyhf
 brew install pothosware/pothos/soapyhackrf
 brew install pothosware/pothos/soapyredpitaya
-brew install pothosware/pothos/soapyrtlsdr
 
 #
 # This is for PrivacyProtection
