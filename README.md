@@ -1,44 +1,30 @@
 # piHPSDR-MacOS-Binary
 
-Here I provide a "click-able" MacOS app file for piHPSDR.
-It is compiled+linked under MacOS 10.15 "Catalina" and
-has been tested there. 
+MacOS has a lot of very useful security features that
+make it difficult to distribute binaries for amateur
+developers such as me. It might happen that your Mac
+refuses to start applications down-loaded from the internet,
+or that such applications do not get permission to use
+sound input devices, and so on.
 
-This is the new piHPSDR 2 near-final version.
+Instead of circumventing all these highly useful security
+features, the "binary" distribution of piHPSDR for MacOS
+now is such that it compiles the application on *YOUR*
+machine.
 
-Since it is next-to-impossible to provide a really
-self-contained app bundle for GTK applications, we
-only include "own" libraries (WDSP and SoapySDR) in the
-app bundle, and require that all other libraries are
-installed by the user in the default location.
+As in the previous binary distribution, a "homebrew"
+universe is installed, now including SoapySDR libraries
+and support files for several radios including the
+Adalm Pluto, and then the source code of WDSP and piHPSDR
+is down-loaded and compiled, at the end the piHPSDR
+application is put on your Desktop.
 
-This is done automatically by the "install.sh" shell script.
-It initializes the "homebrew" universe and installs exactly
-those "homebrew" packages needed to run piHPSDR.
+NOTE: this application will only run on the computer where
+it has been created.
 
-Then the program works but is not able to connect to
-devices through the SoapySDR layer. To this end, the SoaypSDR
-modules must be installed in /usr/local/lib. The files are
-contained in the file soapy.tar.
-
-Install prerequisites etc.
-==========================
-
-As a prerequisite, download the three files
-
-install.sh
-
-pihpsdr.app.tar
-
-soapy.tar
-
-and put them on your Desktop. Depending on your browser,
-these file may additionally be extracted (then you have
-a pihpsdr app bundle and a folder named "usr" on your
-Desktop), these you can delete.
-
-All the initialization etc. is then done by the shell
-script "install.sh". To run it, proceed as follows:
+So download the file install.sh, which is the only file
+you find here besides these notes, and put it on your
+Desktop.
 
 Open the "terminal" app. If you have never used it, it is in the folder
 /Applications/Utilities. In the terminal window that opens, type in the following
@@ -54,18 +40,7 @@ chmod 700 install.sh
 
 ---------------------------------------------------------------------------
 
-Note again, this procedure requires that the files "pihpsdr.app.tar" and "soapy.tar"
-have been down-loaded and put on the Desktop. In the file install.sh there are
-some comments on what is done there, if you want to know. Besides installing
-the "homebrew" universe and the required "homebrew" packages, the file containing
-the app bundle (pihpsdr.app.tar) and the file containing the SoapySDR support files
-(soapy.tar) are extracted.
-
-NOTE: you will be asked the "admin" password once. The procedure can take some
-time (this also depends on the speed of your internet connection), so be patient.
-Very many packages (many more than those named in install.sh) are installed,
-since when installing a package with homebrew, all prerequisites of that package
-are installed as well.
+This should do *everyhing*
 
 
 What if "homebrew" is already installed?
@@ -75,38 +50,13 @@ In this case, you should still execute the "install.sh" script.
 Existing homebrew packages that you might use are not deleted,
 but possibly some new ones are installed.
 
-What if an existing "homebrew" installation is corrupt?
-=======================================================
-
-THIS CASE SHOULD OCCUR ONLY VERY RARELY:
-The feedback I got from users at least in one case indicates that
-there was a "homebrew" installation that was somehow inconsistent,
-and could not be fixed with "brew update", "brew upgrade",
-"brew link" and similar commands. In this case, I recommend saving
-the old "brew universe" and doing a fresh install. As a first step,
-save whatever is contained in the /usr/local directory to a backup.
-Then, issue the command "brew list" to get a list of installed
-packages and save this list to a file on the Desktop.
-Then, remove /usr/local completely and invoke the install.sh
-script.
-
-After this, pihpsdr should be able to run. If this succeeds, you can
-load any packages that you need and that were in your previous 
-homebrew universe by "brew install" commands (you have saved the list of
-packages installed previously in a file on the Desktop). You also can
-(should) copy any non-homebrew file that were in your old /usr/local from your backup
-to your new /usr/local.
-
 Start pihpsdr for the first time
 ================================
 
 If you now try to start piHPSDR by double-clicking the piHPSDR icon,
-you most likely get a message that this program is downloaded from
-the internet and execution is not permitted for security reasons.
-But if you now open the "Security" control panel, you get a message
-there in the lower half of the window and can check a button to open
-the program anyway. Since I am not a professional MacOS developer,
-I cannot code-sign the program.
+you might get asked whether you want to allow piHPSDR to use your
+microphone. This questions refers to sound input devices in general,
+so answer "yes".
 
 Features compiled into the program
 ==================================
@@ -150,4 +100,6 @@ SOAPYSDR
 Ability to use SDR hardware connected via the SoapySDR lib. I have tested this
 with the Adalm Pluto connected via an USB cable to the Macintosh, the only
 SoapySDR-supported hardware that I have. Additionally, I have included 
-supportfiles for LimeSDR and RTL sticks.
+supportfiles for LimeSDR, RTL sticks, AirSpy, AirSpyHF, HackRF but I cannot
+test this. (Volunteers are welcome to test
+this, please report your findings to dl1ycf@darc.de).
