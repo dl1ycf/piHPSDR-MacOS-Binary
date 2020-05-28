@@ -48,16 +48,21 @@ Start pihpsdr for the first time
 ================================
 
 If you now try to start piHPSDR by double-clicking the piHPSDR icon,
-you might get warned that this program is downloaded from the internet
-and therefore potentially insecure. MacOS won't start the program
-then. You have to go the the "Security" control panel and confirm
-in the lower part of the panel that you really want to start the
-program.
+you will get a message that this program cannot be started because
+the program developer cannot be verified. This is normal for programs
+created by amateur programmers such as me. After closing the dialogue,
+you can open the "Security" control panel and click in the bottom half
+that you want to open the program anyway (this has to be done only once).
 
-Furthermore, you might get asked whether you want to allow piHPSDR to
-use your microphone when it is first started.
-This questions refers to sound input devices in general,
-so answer "yes".
+Then, if the program is running on your machine for the first time,
+it has to determine the optimal way to do Fourier transforms. This
+process is called "creating a wisdom file". This file is then stored
+in the ~Library/Application Support/piHPSDR directory and need not
+be calculated again in subsequent runs of the program.
+
+Finally, when you first start a radio with the program, you will
+be asked whether you grant microphone access to piHPSDR. If you
+intend to use local audio devices for input, you have to agree.
 
 Features compiled into the program
 ==================================
