@@ -55,7 +55,7 @@ git clone https://github.com/dl1ycf/pihpsdr.git
 #
 cd $HOME/wdsp
 make -f Makefile.mac -j 4
-make install
+make -f Makefile.mac install
 #
 # compile pihpsdr, and move app bundle to the Desktop
 #
