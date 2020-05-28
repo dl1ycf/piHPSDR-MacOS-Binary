@@ -43,24 +43,4 @@ brew install pothosware/pothos/soapyredpitaya
 # This is for PrivacyProtection
 #
 brew analytics off 
-#
-# Now go to the home directory and download WDSP and pihpsdr
-#
-cd $HOME
-yes | rm -rf pihpsdr
-yes | rm -rf wdsp
-git clone https://github.com/dl1ycf/wdsp.git
-git clone https://github.com/dl1ycf/pihpsdr.git
-#
-# compile and install WDSP
-#
-cd $HOME/wdsp
-make -f Makefile.mac -j 4
-make -f Makefile.mac install
-#
-# compile pihpsdr, and move app bundle to the Desktop
-#
-cd $HOME/pihpsdr
-make -f Makefile.mac -j 4 app
-mv pihpsdr.app $HOME/Desktop
 

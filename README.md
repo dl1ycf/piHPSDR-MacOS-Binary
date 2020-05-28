@@ -1,29 +1,20 @@
 # piHPSDR-MacOS-Binary
 
-MacOS has a lot of very useful security features that
-make it difficult to distribute binaries for amateur
-developers such as me. It might happen that your Mac
-refuses to start applications down-loaded from the internet,
-or that such applications do not get permission to use
-sound input devices, and so on.
+Since this binary has been created on a Mac running
+MacOS 10.15 "Catalina", it will not run on earlier
+versions.
 
-Instead of circumventing all these highly useful security
-features, the "binary" distribution of piHPSDR for MacOS
-now is such that it compiles the application on *YOUR*
-machine.
+This binary is bundled with the WDSP library but
+all other libraries, including SoapySDR and its
+support modules, must be present.
 
-As in the previous binary distribution, a "homebrew"
-universe is installed, now including SoapySDR libraries
-and support files for several radios including the
-Adalm Pluto, and then the source code of WDSP and piHPSDR
-is down-loaded and compiled, at the end the piHPSDR
-application is put on your Desktop.
+To this end, a "homebrew" universe must be created
+on your Mac, and the required libraries must be installed.
 
-NOTE: this application will only run on the computer where
-it has been created.
+This is done automatically with the shell script named
+"install.sh".
 
-So download the file install.sh, which is the only file
-you find here besides these notes, and put it on your
+So download the file install.sh and put it on your
 Desktop. To this end, click "install.sh" and then the "Raw"
 button, then you can save the plain text file to your Desktop.
 
@@ -41,17 +32,10 @@ chmod 700 install.sh
 
 ---------------------------------------------------------------------------
 
-This should do *everyhing*
+You will be asked the aministrator password of your Macintosh *once*.
 
-Which version of MacOS does this run on?
-========================================
-
-Previously, if I had produces a binary on my Mac running MacOS "Catalina",
-it would not run on earlier versions e.g. "Mojave". But now everything is
-compiled on *your* machine so it runs under *your* operating system.
-It used to work with MacOS "Mojave" (meanwhile all my machines are upgraded)
-and I have tested this procedure on an "out-of-the-box" Mac
-running "Catalina".
+The application bundle itself is compressed (pihpsdr.app.zip). You can
+download it and decompress by double-clicking it.
 
 What if "homebrew" is already installed?
 ========================================
@@ -64,8 +48,15 @@ Start pihpsdr for the first time
 ================================
 
 If you now try to start piHPSDR by double-clicking the piHPSDR icon,
-you might get asked whether you want to allow piHPSDR to use your
-microphone. This questions refers to sound input devices in general,
+you might get warned that this program is downloaded from the internet
+and therefore potentially insecure. MacOS won't start the program
+then. You have to go the the "Security" control panel and confirm
+in the lower part of the panel that you really want to start the
+program.
+
+Furthermore, you might get asked whether you want to allow piHPSDR to
+use your microphone when it is first started.
+This questions refers to sound input devices in general,
 so answer "yes".
 
 Features compiled into the program
