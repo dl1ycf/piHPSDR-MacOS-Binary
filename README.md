@@ -42,6 +42,15 @@ chmod 700 install.sh
 
 This should do *everyhing*
 
+Which version of MacOS does this run on?
+========================================
+
+Previously, if I had produces a binary on my Mac running MacOS "Catalina",
+it would not run on earlier versions e.g. "Mojave". But now everything is
+compiled on *your* machine so it runs under *your* operating system.
+It used to work with MacOS "Mojave" (meanwhile all my machines are upgraded)
+and I have tested this procedure on an "out-of-the-box" Mac
+running "Catalina".
 
 What if "homebrew" is already installed?
 ========================================
