@@ -24,7 +24,8 @@ it has been created.
 
 So download the file install.sh, which is the only file
 you find here besides these notes, and put it on your
-Desktop.
+Desktop. To this end, click "install.sh" and then the "Raw"
+button, then you can save the plain text file to your Desktop.
 
 Open the "terminal" app. If you have never used it, it is in the folder
 /Applications/Utilities. In the terminal window that opens, type in the following
