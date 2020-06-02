@@ -11,12 +11,16 @@ support modules, must be present.
 To this end, a "homebrew" universe must be created
 on your Mac, and the required libraries must be installed.
 
-This is done automatically with the shell script named
-"install.sh".
+This is done automatically with a shell script.
+To facilitate the download, both the piHPSDR application
+and the "homebrew installation" shell script are
+compressed (.zip files), so they can be easily down-loaded
+from the github web page just by double-clicking the two
+file in an internet browser window.
 
-So download the file install.sh and put it on your
-Desktop. To this end, click "install.sh" and then the "Raw"
-button, then you can save the plain text file to your Desktop.
+So you use your browser and go to this web page,
+
+https://github.com/dl1ycf/piHPSDR-MacOS-Binary
 
 Open the "terminal" app. If you have never used it, it is in the folder
 /Applications/Utilities. In the terminal window that opens, type in the following
