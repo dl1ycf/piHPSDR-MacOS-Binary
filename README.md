@@ -22,6 +22,18 @@ So you use your browser and go to this web page,
 
 https://github.com/dl1ycf/piHPSDR-MacOS-Binary
 
+Then you click on "install.sh.zip" and then, on the page that opens,
+on the "Download" button. You do the same with "pihpsdr.app.zip". Depending
+on the configuration of your browser, the files might get "unpacked"
+automatically or semi-automatically upon downloading them. The exact
+location where they are stored also depends on the configuration of your
+internet browser, the default is the "Downloads" folder within your home
+directory.
+
+If the files still contain the ".zip" externsion, that is, they are not
+yet "unpacked", unpack both of them by double-clicking then drag them
+(if they are not there yet) on the Desktop.
+
 Open the "terminal" app. If you have never used it, it is in the folder
 /Applications/Utilities. In the terminal window that opens, type in the following
 commands:
@@ -30,16 +42,13 @@ commands:
 
 cd $HOME/Desktop
 
-chmod 700 install.sh
-
 ./install.sh
 
 ---------------------------------------------------------------------------
 
-You will be asked the aministrator password of your Macintosh *once*.
+Normally you will have to confirm that you want to install "homebrew" with the
+"enter" key and then You will be asked the aministrator password of your Macintosh *once*.
 
-The application bundle itself is compressed (pihpsdr.app.zip). You can
-download it and decompress by double-clicking it.
 
 What if "homebrew" is already installed?
 ========================================
