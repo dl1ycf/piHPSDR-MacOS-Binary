@@ -2,9 +2,7 @@
 
 Since this binary has been created on a Mac running
 MacOS 10.15 "Catalina", it will not run on earlier
-versions. At the moment I have a lot of problems
-with MacOS 10.16 "Big Sur" so refrain from updating the
-machine piHPSDR is supposed to run on.
+versions. It runs also with MacOs 11.1 "BigSur".
 
 This binary is bundled with the WDSP library but
 all other libraries, including SoapySDR and its
