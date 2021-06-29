@@ -1,8 +1,23 @@
 # piHPSDR-MacOS-Binary
 
-Since this binary has been created on a Mac running
-MacOS 10.15 "Catalina", it will not run on earlier
-versions. It runs also with MacOs 11.1 "BigSur".
+Date of compilation: June 29, 2021
+
+CAVEAT1:
+-------
+
+This binary has been created on a Mac running MacOS 10.15 "Catalina"
+and therefore will not run on earlier Mac versions. It does run on
+later versions (just tested it on MacOS 11.4)
+
+CAVEAT2:
+--------
+If you already have "HomeBrew" installed for some time, it may
+happen that Version 0.7 of the SoapySDR lib is still present.
+This is *not* upgraded automatically to the current (0.8) version
+so you have to manually "brew uninstall soapysdr" (and all modules
+that depend on it) hand then "brew install soapysdr".  (and all those
+which depend on it).
+
 
 This binary is bundled with the WDSP library but
 all other libraries, including SoapySDR and its
