@@ -13,12 +13,14 @@ CAVEAT2:
 --------
 If you already have "HomeBrew" installed for some time, it may
 happen that Version 0.7 of the SoapySDR lib is still present.
-This is *not* upgraded automatically to the current (0.8) version
-so you have to manually "brew uninstall soapysdr" (and all modules
+Simpliy using "brew upgrade" will probably *not* upgrade SoapySDR to the
+current (0.8) version, to this end 
+o you have to manually "brew uninstall soapysdr" (and all modules
 that depend on it) hand then "brew install soapysdr".  (and all those
 which depend on it).
 
-
+HOWTO
+-----
 This binary is bundled with the WDSP library but
 all other libraries, including SoapySDR and its
 support modules, must be present.
